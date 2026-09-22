@@ -176,4 +176,4 @@ microSDをStackChanへ挿入して起動します。画面に `OpenJTalk READY`�
 
 著作権表示、免責条項、音声モデルの帰属表示を削除しないでください。詳細と取り込み元は [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)、個別の本文は `LICENSES/`、`assets/`、`libraries/StackChan-BSP/LICENSE` を参照してください。
 
-このリポジトリ固有の統合コードには、公開前にプロジェクト全体のライセンスを選択してルートの `LICENSE` として追加してください。ライセンス未指定のまま公開した場合、第三者はコードを閲覧できますが、プロジェクト固有部分を再利用する明確な許諾は得られません。
+このリポジトリ固有の統合コードは [BSD 3-Clause License](LICENSE) で公開します。第三者成果物には、それぞれのライセンス条件が優先して適用されます。
