@@ -41,3 +41,17 @@ elapsed_ms=6125 peak_hts_bytes=576620 psram_free=1912472
 ```
 
 Both the SD-label path and the M5Stack-side label-generation path passed.
+
+## Earlier development verification
+
+The following results were migrated from the original `stackchan-standard` development tree:
+
+- Earlier application binary: 1,413,824 bytes
+- Earlier application binary SHA-256: `8BFB1D81AA8FF6EAF3ACDBAFD24CB74D415F8A8A3B08FDC1955B60CEE6CABE52`
+- SD phrase: 35 labels, 49,520 samples at 16 kHz, 4,493 ms, peak HTS allocation 424,780 bytes
+- Serial phrase `スタックチャン、好きな言葉を話せるようになりました。`: 49 labels, 64,480 samples, 5,955 ms, peak HTS allocation 578,680 bytes
+- Second serial phrase without reboot `こんにちは、スタックチャンです。`: 26 labels, 40,480 samples, 3,504 ms, peak HTS allocation 327,720 bytes
+- Speaker volume verification phrase `音量を少し大きくしました。`: `RESULT=PASS` after increasing the volume from 96 to 160
+- Pitch verification phrase `声を少し高くしました。`: `RESULT=PASS` at the default shift of three semitones
+- Device-label phrase `スタックチャンの中で文章を解析しています。`: 43 labels generated in 1,070 ms using 122,880 bytes of transient PSRAM; 57,360 samples synthesized in 5,285 ms
+- Second device-label phrase without reboot `本体でのラベル作成に成功しました。`: 41 labels generated in 896 ms using 65,420 bytes of transient PSRAM; 51,840 samples synthesized in 4,834 ms
