@@ -1,0 +1,20 @@
+#ifndef OPENJTALK_FRONTEND_BUILD_CONFIG_H
+#define OPENJTALK_FRONTEND_BUILD_CONFIG_H
+
+#define DIC_VERSION 102
+#define PACKAGE "open_jtalk"
+#define VERSION "1.11"
+#define CHARSET_UTF_8 1
+#define FLITE_PLUS_HTS_ENGINE 1
+#define FESTIVAL 1
+#define MPL_DEBUG 1
+#define HAVE_FCNTL_H 1
+#define HAVE_STRING_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_DIRENT_H 1
+#define HAVE_GETENV 1
+
+#endif
