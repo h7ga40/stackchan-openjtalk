@@ -10,11 +10,15 @@ The embedded sources under `vendor/` were imported from:
 
 The untracked `OpenJTalk/user_dict.csv` in the source working tree was not imported.
 
-Open JTalk, MeCab, and HTS Engine source files retain their original copyright and license headers. Review those headers before redistribution.
+Open JTalk and HTS Engine are redistributed under their modified BSD licenses. MeCab is available under GPL, LGPL, or BSD terms; this repository selects its BSD option. Source files retain their original copyright and license headers. Standalone copies of the selected terms are preserved under `LICENSES/`.
+
+- Open JTalk: `https://open-jtalk.sourceforge.net/`
+- HTS Engine API: `https://hts-engine.sourceforge.net/`
+- MeCab licensing: `https://github.com/taku910/mecab/blob/master/mecab/COPYING`
 
 ## Open JTalk dictionary
 
-The runtime dictionary is kept outside Git under `assets/cache/open_jtalk_dic_utf_8-1.11`. Its `COPYING` file is retained alongside the cached dictionary. The dictionary was imported from the same source working tree and is copied only to the SD card by `tools/prepare_sd.ps1`.
+The runtime dictionary is kept outside Git under `assets/cache/open_jtalk_dic_utf_8-1.11` and is not distributed by this repository. Users obtain the official UTF-8 binary package from the Open JTalk 1.11 website. Its `COPYING` file must be retained alongside the cached dictionary. The dictionary is copied only to the SD card by `tools/prepare_sd.ps1`.
 
 ## Mei voice
 
@@ -23,3 +27,5 @@ The runtime dictionary is kept outside Git under `assets/cache/open_jtalk_dic_ut
 ## StackChan-BSP
 
 `libraries/StackChan-BSP` is based on M5Stack StackChan-BSP 1.1.0, commit `f7ed40e6f5d9a1d08440cb926f3a0865b81882f8`, with the local M5Unified 0.2.21 IO-expander compatibility changes used by the verified K151-R build.
+
+The upstream MIT license is retained as `libraries/StackChan-BSP/LICENSE`. MIT notices for the bundled FTServo Arduino driver and UI toolkit are retained in their respective source directories.
