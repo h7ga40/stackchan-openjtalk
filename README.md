@@ -27,6 +27,12 @@ M5Stack StackChan K151-R上で、日本語テキストの解析、フルコン�
 
 リポジトリをGitで取得する場合はGitも必要です。GitHubのZIPを展開して利用する場合、Gitは不要です。Python、PC版Open JTalk、MeCabの個別インストールは必要ありません。
 
+### PowerShellと文字コード
+
+日本語テキストとデバイスのシリアル通信にはUTF-8を使用します。付属の発話スクリプトはシリアルポートの文字コードをUTF-8へ明示的に設定するため、通常はコードページの変更は必要ありません。
+
+Windows PowerShell 5.1で、日本語などの非ASCII文字を直接記述した独自の `.ps1` ファイルを作る場合は、UTF-8 BOM付きで保存してください。PowerShell 7ではUTF-8 BOMなしも正しく扱えます。Shift_JISへの変換や、システム既定の文字コードに依存したファイル入出力は避けてください。
+
 ## ボードマネージャ
 
 付属の `tools/setup.ps1` が次のURLとバージョンを自動設定します。
@@ -155,6 +161,7 @@ microSDをStackChanへ挿入して起動します。画面に `OpenJTalk READY`�
 
 ## リポジトリ構成
 
+- `AGENTS.md`: Codexが変更時に従うプロジェクト固有の指示
 - `firmware/StackChanOpenJTalk`: K151-R用スケッチ
 - `libraries/OpenJTalkRawK151`: 省メモリ版HTS EngineのArduinoラッパー
 - `libraries/OpenJTalkFrontendK151`: Open JTalk/MeCabフロントエンドのArduinoラッパー
